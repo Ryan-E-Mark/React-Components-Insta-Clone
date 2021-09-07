@@ -9,15 +9,15 @@ import { faComment, faHeart } from '@fortawesome/free-regular-svg-icons';
 const LikeSection = props => {
   // 🔥 Make sure the parent of LikeSection is passing the right props!
   const { likePost, numberOfLikes } = props;
-
+  // console.log(props);
   return (
     <div>
       <div
         className='like-section'
         key='likes-icons-container'
       >
-        <div className='like-section-wrapper' onClick={() => likePost(props.postId)}>
-          <FontAwesomeIcon icon={faHeart} />
+        <div className='like-section-wrapper'>
+          <FontAwesomeIcon icon={faHeart}  onClick={likePost} />
         </div>
         <div className='like-section-wrapper'>
           <FontAwesomeIcon icon={faComment} />
